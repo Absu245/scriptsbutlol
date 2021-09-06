@@ -59,7 +59,7 @@ GetNightVision()
 
 debug.setconstant(ThrowKnifeFunc, 46, 1)
 
-MsgBox("hackermod loadded by Synapse X")
+MsgBox("hackermod loadded by Biznespro And bogdan4935")
 while wait(0.1) do
     local ptr = GetSkid()
     if ptr ~= nil and lp.Character:FindFirstChild("Blade") then
