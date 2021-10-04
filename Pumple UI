@@ -250,7 +250,7 @@ local window = library:CreateWindow('Pumple UI') do
         library:Close()
     end})
     window:AddLabel({text = 'Made by Pumple Corp ✓'})
-    window:AddLabel({text = 'Official Version 1.4 F$6546'})
+    window:AddLabel({text = 'Official Version 1.3 Q$9503'})
 end
 
 library:Init()
