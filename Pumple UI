@@ -70,7 +70,7 @@ local messages = {
     "Ez, ez, ez, ez, ez, ez, ez, ez!",
     "{v} get good (no u bad)",
     "{v} lol you not have skillz",
-    "ur mom rip",
+    "",
     "git good bud",
     "im have a good gaming chair!",
     "im  winning!",
@@ -241,7 +241,7 @@ local window = library:CreateWindow('Pumple Hub') do
         end})
         
         folder:AddToggle({text = 'Speed Enable', flag = 'speedHack'})
-        folder:AddSlider({text = 'Speed factor', flag = 'speedFactor', min = 0.1, max = 0.25, float = 0.01})
+        folder:AddSlider({text = 'Speed factor', flag = 'speedFactor', min = 0.1, max = 0.28, float = 0.01})
         folder:AddBind({text = 'Speed Bind', flag = 'speedBind', hold = true, callback = function(value)
             library._speedHackHeld = (not value)
         end})
