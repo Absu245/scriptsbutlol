@@ -230,10 +230,10 @@ if (character) then
 end
 client.CharacterAdded:connect(initLogic)
 
-local window = library:CreateWindow('Pumple UI') do
+local window = library:CreateWindow('Pumple Hub') do
     local folder = window:AddFolder('Main') do
         folder:AddToggle({text = 'Auto attack', flag = 'autoAttack'})
-        folder:AddToggle({text = 'Kill Say ', flag = 'killsay'})
+        folder:AddToggle({text = 'Kill Say ', flag = 'killSay'})
         folder:AddToggle({text = 'Attack in the back', flag = 'attachToTarget', callback = function(value)
             if (not value) then
                 target = all;
@@ -250,7 +250,7 @@ local window = library:CreateWindow('Pumple UI') do
         library:Close()
     end})
     window:AddLabel({text = 'Made by Pumple Corp ✓'})
-    window:AddLabel({text = 'Official Version 1.3 Q$9503'})
+    window:AddLabel({text = 'Official Version 1.4 Z$0731'})
 end
 
 library:Init()
