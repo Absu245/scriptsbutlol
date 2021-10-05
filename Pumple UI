@@ -233,15 +233,15 @@ client.CharacterAdded:connect(initLogic)
 local window = library:CreateWindow('Pumple Hub') do
     local folder = window:AddFolder('Main') do
         folder:AddToggle({text = 'Auto attack', flag = 'autoAttack'})
-        folder:AddToggle({text = 'Kill Say ', flag = 'killSay'})
-        folder:AddToggle({text = 'Attack in the back', flag = 'attachToTarget', callback = function(value)
+        folder:AddToggle({text = 'Kill Say', flag = 'killSay'})
+        folder:AddToggle({text = 'Tp to back Target', flag = 'attachToTarget', callback = function(value)
             if (not value) then
                 target = all;
             end
         end})
         
         folder:AddToggle({text = 'Speed Enable', flag = 'speedHack'})
-        folder:AddSlider({text = 'Speed factor', flag = 'speedFactor', min = 0.1, max = 0.28, float = 0.01})
+        folder:AddSlider({text = 'Speed factor', flag = 'speedFactor', min = 0.1, max = 0.29, float = 0.01})
         folder:AddBind({text = 'Speed Bind', flag = 'speedBind', hold = true, callback = function(value)
             library._speedHackHeld = (not value)
         end})
