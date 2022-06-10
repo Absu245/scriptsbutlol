@@ -1,0 +1,143 @@
+print"Loading Aut Farm Script :D"
+wait(2)
+local ScreenGui = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local UIGradient = Instance.new("UIGradient")
+local UICorner = Instance.new("UICorner")
+local TextLabel = Instance.new("ImageLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local borderPixel = Instance.new("ImageLabel")
+local startfarm = Instance.new("ImageButton")
+local TextLabel_3 = Instance.new("TextLabel")
+local borderPixel_2 = Instance.new("ImageButton")
+local TextLabel_4 = Instance.new("ImageLabel")
+local TextLabel_5 = Instance.new("TextLabel")
+local borderPixel_3 = Instance.new("ImageLabel")
+
+ScreenGui.Parent = game.CoreGui
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+main.BorderColor3 = Color3.fromRGB(27, 42, 53)
+main.BorderSizePixel = 0
+main.Position = UDim2.new(0.322530866, 0, 0.205601901, 0)
+main.Size = UDim2.new(0, 578, 0, 208)
+main.Active = true
+main.Draggable = true
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(71, 71, 71)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(71, 71, 71))}
+UIGradient.Parent = main
+
+UICorner.CornerRadius = UDim.new(0, 9)
+UICorner.Parent = main
+
+TextLabel.Name = "TextLabel"
+TextLabel.Parent = main
+TextLabel.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.0311418679, 0, 0.101752684, 0)
+TextLabel.Size = UDim2.new(0, 542, 0, 40)
+TextLabel.ZIndex = 2
+TextLabel.Image = "rbxassetid://2790390993"
+TextLabel.ImageColor3 = Color3.fromRGB(100, 100, 100)
+TextLabel.ScaleType = Enum.ScaleType.Slice
+TextLabel.SliceCenter = Rect.new(16, 16, 240, 240)
+
+TextLabel_2.Parent = TextLabel
+TextLabel_2.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0.498154968, 0, 0.5, 0)
+TextLabel_2.Size = UDim2.new(1, 0, 0.899999976, 0)
+TextLabel_2.ZIndex = 2
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "Safe Auto Farm Bot | A Univarsal Time V.4.4 UI"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 32.000
+
+borderPixel.Name = "borderPixel"
+borderPixel.Parent = TextLabel
+borderPixel.AnchorPoint = Vector2.new(0.5, 0.5)
+borderPixel.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+borderPixel.BackgroundTransparency = 1.000
+borderPixel.Position = UDim2.new(0.5, 0, 0.5, 0)
+borderPixel.Size = UDim2.new(1, 2, 1, 2)
+borderPixel.Image = "rbxassetid://2790390993"
+borderPixel.ImageColor3 = Color3.fromRGB(27, 42, 53)
+borderPixel.ScaleType = Enum.ScaleType.Slice
+borderPixel.SliceCenter = Rect.new(16, 16, 240, 240)
+
+startfarm.Name = "startfarm"
+startfarm.Parent = main
+startfarm.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+startfarm.BackgroundTransparency = 1.000
+startfarm.Position = UDim2.new(0.0882352889, 0, 0.504807651, 0)
+startfarm.Size = UDim2.new(0, 208, 0, 48)
+startfarm.ZIndex = 2
+startfarm.Image = "rbxassetid://2790390993"
+startfarm.ImageColor3 = Color3.fromRGB(40, 40, 40)
+startfarm.ScaleType = Enum.ScaleType.Slice
+startfarm.SliceCenter = Rect.new(16, 16, 240, 240)
+startfarm.MouseButton1Down:connect(function()
+	_G.enable = true
+
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/GodClass/EpicScripts/main/AUT%20Items%20Farmer.txt"))()
+end)
+
+TextLabel_3.Parent = startfarm
+TextLabel_3.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_3.Size = UDim2.new(1, 0, 0.899999976, 0)
+TextLabel_3.ZIndex = 2
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = "Start Farm"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextSize = 28.000
+
+borderPixel_2.Name = "borderPixel"
+borderPixel_2.Parent = startfarm
+borderPixel_2.AnchorPoint = Vector2.new(0.5, 0.5)
+borderPixel_2.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+borderPixel_2.BackgroundTransparency = 1.000
+borderPixel_2.Position = UDim2.new(0.5, 0, 0.5, 0)
+borderPixel_2.Size = UDim2.new(1, 2, 1, 2)
+borderPixel_2.Image = "rbxassetid://2790390993"
+borderPixel_2.ImageColor3 = Color3.fromRGB(27, 42, 53)
+borderPixel_2.ScaleType = Enum.ScaleType.Slice
+borderPixel_2.SliceCenter = Rect.new(16, 16, 240, 240)
+
+TextLabel_4.Name = "TextLabel"
+TextLabel_4.Parent = main
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.Position = UDim2.new(0.550172985, 0, 0.432692319, 0)
+TextLabel_4.Size = UDim2.new(0, 228, 0, 79)
+TextLabel_4.ZIndex = 2
+TextLabel_4.Image = "rbxassetid://2790390993"
+TextLabel_4.ImageColor3 = Color3.fromRGB(47, 47, 47)
+TextLabel_4.ScaleType = Enum.ScaleType.Slice
+TextLabel_4.SliceCenter = Rect.new(16, 16, 240, 240)
+
+TextLabel_5.Parent = TextLabel_4
+TextLabel_5.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_5.Size = UDim2.new(1, 0, 0.899999976, 0)
+TextLabel_5.ZIndex = 2
+TextLabel_5.Font = Enum.Font.SourceSans
+TextLabel_5.Text = "Script Status : Working"
+TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.TextSize = 28.000
+
+borderPixel_3.Name = "borderPixel"
+borderPixel_3.Parent = TextLabel_4
+borderPixel_3.AnchorPoint = Vector2.new(0.5, 0.5)
+borderPixel_3.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+borderPixel_3.BackgroundTransparency = 1.000
+borderPixel_3.Position = UDim2.new(0.5, 0, 0.5, 0)
+borderPixel_3.Size = UDim2.new(1, 2, 1, 2)
+borderPixel_3.Image = "rbxassetid://2790390993"
+borderPixel_3.ImageColor3 = Color3.fromRGB(27, 42, 53)
+borderPixel_3.ScaleType = Enum.ScaleType.Slice
+borderPixel_3.SliceCenter = Rect.new(16, 16, 240, 240)
