@@ -1,5 +1,6 @@
-print"Loading Aut Farm Script :D"
-wait(2)
+warn"Aut server waiting"
+wait(1)
+warn"Script Loaded Local Side"
 local ScreenGui = Instance.new("ScreenGui")
 local main = Instance.new("Frame")
 local UIGradient = Instance.new("UIGradient")
@@ -13,6 +14,9 @@ local borderPixel_2 = Instance.new("ImageButton")
 local TextLabel_4 = Instance.new("ImageLabel")
 local TextLabel_5 = Instance.new("TextLabel")
 local borderPixel_3 = Instance.new("ImageLabel")
+local rejoin = Instance.new("ImageButton")
+local TextLabel_6 = Instance.new("TextLabel")
+local borderPixel_4 = Instance.new("ImageButton")
 
 ScreenGui.Parent = game.CoreGui
 
@@ -21,12 +25,12 @@ main.Parent = ScreenGui
 main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 main.BorderColor3 = Color3.fromRGB(27, 42, 53)
 main.BorderSizePixel = 0
-main.Position = UDim2.new(0.322530866, 0, 0.205601901, 0)
+main.Position = UDim2.new(0.267746925, 0, 0.29022646, 0)
 main.Size = UDim2.new(0, 578, 0, 208)
 main.Active = true
 main.Draggable = true
 
-UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(71, 71, 71)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(71, 71, 71))}
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(131, 131, 131)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(131, 131, 131))}
 UIGradient.Parent = main
 
 UICorner.CornerRadius = UDim.new(0, 9)
@@ -34,7 +38,7 @@ UICorner.Parent = main
 
 TextLabel.Name = "TextLabel"
 TextLabel.Parent = main
-TextLabel.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.BackgroundTransparency = 1.000
 TextLabel.Position = UDim2.new(0.0311418679, 0, 0.101752684, 0)
 TextLabel.Size = UDim2.new(0, 542, 0, 40)
@@ -46,19 +50,21 @@ TextLabel.SliceCenter = Rect.new(16, 16, 240, 240)
 
 TextLabel_2.Parent = TextLabel
 TextLabel_2.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
 TextLabel_2.BackgroundTransparency = 1.000
-TextLabel_2.Position = UDim2.new(0.498154968, 0, 0.5, 0)
-TextLabel_2.Size = UDim2.new(1, 0, 0.899999976, 0)
+TextLabel_2.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_2.Size = UDim2.new(0.915129125, 0, 0.899999976, 0)
 TextLabel_2.ZIndex = 2
 TextLabel_2.Font = Enum.Font.SourceSans
-TextLabel_2.Text = "Safe Auto Farm Bot | A Univarsal Time V.4.4 UI"
+TextLabel_2.Text = "Safe Auto Farm Pro | A Univarsal Time V.5.3 UI"
 TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_2.TextSize = 32.000
 
 borderPixel.Name = "borderPixel"
 borderPixel.Parent = TextLabel
 borderPixel.AnchorPoint = Vector2.new(0.5, 0.5)
-borderPixel.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+borderPixel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 borderPixel.BackgroundTransparency = 1.000
 borderPixel.Position = UDim2.new(0.5, 0, 0.5, 0)
 borderPixel.Size = UDim2.new(1, 2, 1, 2)
@@ -71,7 +77,7 @@ startfarm.Name = "startfarm"
 startfarm.Parent = main
 startfarm.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 startfarm.BackgroundTransparency = 1.000
-startfarm.Position = UDim2.new(0.0882352889, 0, 0.504807651, 0)
+startfarm.Position = UDim2.new(0.0847750902, 0, 0.384615332, 0)
 startfarm.Size = UDim2.new(0, 208, 0, 48)
 startfarm.ZIndex = 2
 startfarm.Image = "rbxassetid://2790390993"
@@ -87,8 +93,8 @@ end)
 TextLabel_3.Parent = startfarm
 TextLabel_3.AnchorPoint = Vector2.new(0.5, 0.5)
 TextLabel_3.BackgroundTransparency = 1.000
-TextLabel_3.Position = UDim2.new(0.5, 0, 0.5, 0)
-TextLabel_3.Size = UDim2.new(1, 0, 0.899999976, 0)
+TextLabel_3.Position = UDim2.new(0.504807711, 0, 0.525000274, 0)
+TextLabel_3.Size = UDim2.new(1, 0, 0.950000465, 0)
 TextLabel_3.ZIndex = 2
 TextLabel_3.Font = Enum.Font.SourceSans
 TextLabel_3.Text = "Start Farm"
@@ -111,8 +117,8 @@ TextLabel_4.Name = "TextLabel"
 TextLabel_4.Parent = main
 TextLabel_4.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
 TextLabel_4.BackgroundTransparency = 1.000
-TextLabel_4.Position = UDim2.new(0.550172985, 0, 0.432692319, 0)
-TextLabel_4.Size = UDim2.new(0, 228, 0, 79)
+TextLabel_4.Position = UDim2.new(0.513840854, 0, 0.442307681, 0)
+TextLabel_4.Size = UDim2.new(0, 264, 0, 75)
 TextLabel_4.ZIndex = 2
 TextLabel_4.Image = "rbxassetid://2790390993"
 TextLabel_4.ImageColor3 = Color3.fromRGB(47, 47, 47)
@@ -122,11 +128,11 @@ TextLabel_4.SliceCenter = Rect.new(16, 16, 240, 240)
 TextLabel_5.Parent = TextLabel_4
 TextLabel_5.AnchorPoint = Vector2.new(0.5, 0.5)
 TextLabel_5.BackgroundTransparency = 1.000
-TextLabel_5.Position = UDim2.new(0.5, 0, 0.5, 0)
-TextLabel_5.Size = UDim2.new(1, 0, 0.899999976, 0)
+TextLabel_5.Position = UDim2.new(0.504219413, 0, 0.505952358, 0)
+TextLabel_5.Size = UDim2.new(1, 0, 1.01190472, 0)
 TextLabel_5.ZIndex = 2
 TextLabel_5.Font = Enum.Font.SourceSans
-TextLabel_5.Text = "Script Status : Working"
+TextLabel_5.Text = "Script Status : Working!"
 TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_5.TextSize = 28.000
 
@@ -141,3 +147,49 @@ borderPixel_3.Image = "rbxassetid://2790390993"
 borderPixel_3.ImageColor3 = Color3.fromRGB(27, 42, 53)
 borderPixel_3.ScaleType = Enum.ScaleType.Slice
 borderPixel_3.SliceCenter = Rect.new(16, 16, 240, 240)
+
+rejoin.Name = "rejoin"
+rejoin.Parent = main
+rejoin.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+rejoin.BackgroundTransparency = 1.000
+rejoin.Position = UDim2.new(0.0847750902, 0, 0.697115362, 0)
+rejoin.Size = UDim2.new(0, 208, 0, 44)
+rejoin.ZIndex = 2
+rejoin.Image = "rbxassetid://2790390993"
+rejoin.ImageColor3 = Color3.fromRGB(39, 39, 39)
+rejoin.ScaleType = Enum.ScaleType.Slice
+rejoin.SliceCenter = Rect.new(16, 16, 240, 240)
+rejoin.MouseButton1Down:connect(function()
+	while true do
+		wait(0)
+		local TeleportService = game:GetService("TeleportService")
+		local ReplicatedStorage = game:GetService("ReplicatedStorage")
+		local Players = game:GetService("Players")
+
+		local placeId = 6846458508
+		TeleportService:Teleport(placeId)
+	end
+end)
+
+TextLabel_6.Parent = rejoin
+TextLabel_6.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_6.BackgroundTransparency = 1.000
+TextLabel_6.Position = UDim2.new(0.50227797, 0, 0.521817982, 0)
+TextLabel_6.Size = UDim2.new(1, 0, 0.956363142, 0)
+TextLabel_6.ZIndex = 2
+TextLabel_6.Font = Enum.Font.SourceSans
+TextLabel_6.Text = "Stop Farm (Rejoin)"
+TextLabel_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.TextSize = 28.000
+
+borderPixel_4.Name = "borderPixel"
+borderPixel_4.Parent = rejoin
+borderPixel_4.AnchorPoint = Vector2.new(0.5, 0.5)
+borderPixel_4.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+borderPixel_4.BackgroundTransparency = 1.000
+borderPixel_4.Position = UDim2.new(0.5, 0, 0.5, 0)
+borderPixel_4.Size = UDim2.new(1, 2, 1, 2)
+borderPixel_4.Image = "rbxassetid://2790390993"
+borderPixel_4.ImageColor3 = Color3.fromRGB(27, 42, 53)
+borderPixel_4.ScaleType = Enum.ScaleType.Slice
+borderPixel_4.SliceCenter = Rect.new(16, 16, 240, 240)
