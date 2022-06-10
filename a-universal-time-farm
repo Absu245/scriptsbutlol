@@ -1,6 +1,13 @@
 warn"Aut server waiting"
 wait(1)
 warn"Script Loaded Local Side"
+local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+warn"anti afk on"
+wait(1)
+vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
 local ScreenGui = Instance.new("ScreenGui")
 local main = Instance.new("Frame")
 local UIGradient = Instance.new("UIGradient")
