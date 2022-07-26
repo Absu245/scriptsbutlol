@@ -1,0 +1,151 @@
+
+local ScreenGui = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local name = Instance.new("TextLabel")
+local close = Instance.new("TextButton")
+local start = Instance.new("TextButton")
+local stop = Instance.new("TextButton")
+local antiafk = Instance.new("TextButton")
+local lbel = Instance.new("TextLabel")
+local warn = Instance.new("TextLabel")
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.fromRGB(141, 141, 141)
+main.Position = UDim2.new(0.223765433, 0, 0.245530397, 0)
+main.Size = UDim2.new(0, 512, 0, 145)
+main.Active = true
+main.Draggable = true
+
+name.Name = "name"
+name.Parent = main
+name.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+name.Size = UDim2.new(0, 511, 0, 33)
+name.Font = Enum.Font.SourceSans
+name.Text = "Slap Battles | Bob Auto Farm | V.3.0"
+name.TextColor3 = Color3.fromRGB(255, 255, 255)
+name.TextSize = 32.000
+
+close.Name = "close"
+close.Parent = main
+close.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+close.Position = UDim2.new(0.953033268, 0, 0, 0)
+close.Size = UDim2.new(0, 24, 0, 26)
+close.Font = Enum.Font.SourceSans
+close.Text = "X"
+close.TextColor3 = Color3.fromRGB(255, 255, 255)
+close.TextSize = 24.000
+
+start.Name = "start"
+start.Parent = main
+start.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
+start.Position = UDim2.new(0.0469476208, 0, 0.358400583, 0)
+start.Size = UDim2.new(0, 139, 0, 33)
+start.Font = Enum.Font.SourceSans
+start.Text = "Start Farm"
+start.TextColor3 = Color3.fromRGB(255, 255, 255)
+start.TextSize = 28.000
+
+stop.Name = "stop"
+stop.Parent = main
+stop.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
+stop.Position = UDim2.new(0.362073451, 0, 0.359433711, 0)
+stop.Size = UDim2.new(0, 139, 0, 34)
+stop.Font = Enum.Font.SourceSans
+stop.Text = "Stop Farm"
+stop.TextColor3 = Color3.fromRGB(255, 255, 255)
+stop.TextSize = 28.000
+
+antiafk.Name = "antiafk"
+antiafk.Parent = main
+antiafk.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
+antiafk.Position = UDim2.new(0.681078792, 0, 0.360551417, 0)
+antiafk.Size = UDim2.new(0, 139, 0, 33)
+antiafk.Font = Enum.Font.SourceSans
+antiafk.Text = "Anti Afk"
+antiafk.TextColor3 = Color3.fromRGB(255, 255, 255)
+antiafk.TextSize = 28.000
+antiafk.MouseButton1Down:connect(function()
+	local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+wait(1)
+vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
+print"Bob Farm Anti Afk Enabled !"
+end)
+
+lbel.Name = "lbel"
+lbel.Parent = main
+lbel.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
+lbel.Position = UDim2.new(0, 0, 0.69457984, 0)
+lbel.Size = UDim2.new(0, 512, 0, 4)
+lbel.Font = Enum.Font.SourceSans
+lbel.Text = ""
+lbel.TextColor3 = Color3.fromRGB(255, 255, 255)
+lbel.TextSize = 28.000
+
+warn.Name = "warn"
+warn.Parent = main
+warn.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+warn.Position = UDim2.new(0.01953125, 0, 0.77241379, 0)
+warn.Size = UDim2.new(0, 493, 0, 27)
+warn.Font = Enum.Font.SourceSans
+warn.Text = "Dont Press E if you start or you got kicked!"
+warn.TextColor3 = Color3.fromRGB(255, 255, 255)
+warn.TextSize = 28.000
+
+local function KEFTA_fake_script() -- Start.StartScript 
+	local script = Instance.new('LocalScript', start)
+
+	local a = 0
+	local function Start()
+		_G.farm = true
+		while _G.farm == true do
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-368, 328, 4, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+			wait (0.3)
+			game:GetService("ReplicatedStorage").Duplicate:FireServer()
+			wait (0.3)
+			a += 1
+			print('Attempt '..a)
+			local args = {
+				[1] = game:GetService("Players").LocalPlayer.Character,
+				[2] = false
+			}
+
+			game:GetService("ReplicatedStorage").HumanoidDied:FireServer(unpack(args))
+			wait (4)
+		end
+	end
+
+	script.Parent.MouseButton1Click:Connect(function()
+		Start()
+	end)
+end
+coroutine.wrap(KEFTA_fake_script)()
+local function XGTWZ_fake_script() -- End.EndScript 
+	local script = Instance.new('LocalScript', stop)
+
+	local function End()
+		_G.farm = false
+	end
+
+	script.Parent.MouseButton1Click:Connect(function()
+		End()
+	end)
+
+end
+coroutine.wrap(XGTWZ_fake_script)()
+local function JOMPQH_fake_script() -- Exit.ExitScript 
+	local script = Instance.new('LocalScript', close)
+
+	local main = script.Parent.Parent
+
+	script.Parent.MouseButton1Click:Connect(function()
+		main:Destroy()
+	end)
+end
+coroutine.wrap(JOMPQH_fake_script)()
