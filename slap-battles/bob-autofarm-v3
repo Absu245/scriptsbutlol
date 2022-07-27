@@ -110,7 +110,7 @@ local function KEFTA_fake_script() -- Start.StartScript
 			game:GetService("ReplicatedStorage").Duplicate:FireServer()
 			wait (0.3)
 			a += 1
-			print('Attempt '..a)
+			print('Bob Trying '..a)
 			local args = {
 				[1] = game:GetService("Players").LocalPlayer.Character,
 				[2] = false
