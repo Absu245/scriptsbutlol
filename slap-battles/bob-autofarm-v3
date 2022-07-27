@@ -25,7 +25,7 @@ name.Parent = main
 name.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
 name.Size = UDim2.new(0, 511, 0, 33)
 name.Font = Enum.Font.SourceSans
-name.Text = "Slap Battles | Bob Auto Farm | V.3.0"
+name.Text = "Slap Battles | Bob Auto Farm | V.3.1"
 name.TextColor3 = Color3.fromRGB(255, 255, 255)
 name.TextSize = 32.000
 
