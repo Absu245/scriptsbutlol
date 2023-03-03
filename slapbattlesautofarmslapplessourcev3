@@ -77,13 +77,8 @@ else
 	pcall(function()
 		game.Players.LocalPlayer.Character.Head:Destroy() --Anti report enabler
 	end)
-task.wait(0.4)
-	if not localPlr.Character:FindFirstChild("entered") and localPlr.Character:FindFirstChild("HumanoidRootPart") then
-		repeat wait(0.5)
-			firetouchinterest(localPlr.Character.HumanoidRootPart, workspace.Lobby.Teleport2, 0)
-			firetouchinterest(localPlr.Character.HumanoidRootPart, workspace.Lobby.Teleport2, 1)
-		until localPlr.Character:FindFirstChild("entered") ~= nil
-	end
+task.wait(0.3)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-563.724304, 329.886566, -8.02650452, 1, 0, 0, 0, -1, 0, 0, 0, -1)
 	pcall(function()
 		game.Players.LocalPlayer.Character.Head:Destroy() --Anti report enabler
 	end)
