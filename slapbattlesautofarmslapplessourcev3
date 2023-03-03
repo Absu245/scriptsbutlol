@@ -1,5 +1,5 @@
 if game.PlaceId ~= 6403373529 or not getgenv().autofarmenabled then return end
-
+--v31
 game.StarterGui:SetCore("SendNotification", {Title="Slapples Auto Farm"; Text="Starting farm V3!"; Duration=4;})
 local localPlr = game:GetService("Players").LocalPlayer
 local PlaceID = game.PlaceId
