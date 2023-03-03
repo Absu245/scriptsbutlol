@@ -77,7 +77,7 @@ else
 	pcall(function()
 		game.Players.LocalPlayer.Character.Head:Destroy() --Anti report enabler
 	end)
-task.wait(0.3)
+task.wait(0.4)
 	if not localPlr.Character:FindFirstChild("entered") and localPlr.Character:FindFirstChild("HumanoidRootPart") then
 		repeat wait(0.5)
 			firetouchinterest(localPlr.Character.HumanoidRootPart, workspace.Lobby.Teleport2, 0)
